@@ -22,5 +22,5 @@ def rename_file_numbers(directory, number_list):
 
 if __name__=='__main__':
     my_directory = 'Photos/2022-07/Not Cataloged/Simpsons Comics Presents Bart Simpson'
-    x = parse_number_file('Photos/2022-07/Not Cataloged/Simpsons Comics Presents Bart Simpson.txt')
-    rename_file_numbers(my_directory, x)
+    file_number_list = parse_number_file('Photos/2022-07/Not Cataloged/Simpsons Comics Presents Bart Simpson.txt')
+    rename_file_numbers(my_directory, file_number_list)
