@@ -1,3 +1,5 @@
 **/__pycache__/**
 /.idea
 *.bak
+
+/file_names.csv
