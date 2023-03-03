@@ -19,5 +19,5 @@ optional arguments:
 
 ### How to run
 ```bash
-$ ./run.py --directory name/of/dir --output-file my_output_file.csv
+$ python3 src/main.py --directory ./Photos/ --output-file output.csv
 ```
