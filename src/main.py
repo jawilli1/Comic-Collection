@@ -18,7 +18,7 @@ def write_dict_to_csv(dict_list, file_name):
 
 
 if __name__ == "__main__":
-    files = test_list_files()
+    files = list_files()
     dict_list = sort_file_names_to_dict(files)
-    # write_dict_to_csv(dict_list, 'file_names.csv')
+    write_dict_to_csv(dict_list, 'file_names.csv')
     print(len(dict_list))
