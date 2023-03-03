@@ -8,14 +8,14 @@ def list_files(location="./Photos/2022-01"):
 
 def test_list_files():
     return [
-        "Mad_EC_1_%35_July_1958.jpg",
-        "Detective Comics_DC_1_1_Sep_1940.jpg",
-        "Mad___110_Sep_1966.jpg",
-        "Mad_ _ _110_Sep_1966.jpg",
-        "Mad_     _     _110_Sep_1966.jpg",
-        "Detective Comics___4__1953.jpg",
-        "Mad___250.jpg",
-        "Simpsons Shenanigans_Bongo.jpg",
+        "Mad^EC^1^%35^July^1958.jpg",
+        "Detective Comics^DC^1^1^Sep^1940.jpg",
+        "Mad^^^110^Sep^1966.jpg",
+        "Mad^ ^ ^110^Sep^1966.jpg",
+        "Mad^     ^     ^110^Sep^1966.jpg",
+        "Detective Comics^^^4^^1953.jpg",
+        "Mad^^^250.jpg",
+        "Simpsons Shenanigans^Bongo.jpg",
     ]
 
 

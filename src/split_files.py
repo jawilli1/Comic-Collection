@@ -11,6 +11,9 @@ FIELDS = (
 )
 
 
+DELIMITER = "^"
+
+
 def assert_file_name_list(file_name_list):
     file_name_list_length = len(file_name_list)
     field_length = len(FIELDS)
@@ -28,7 +31,7 @@ def remove_placeholders_map(item):
 
 def file_name_to_dict(file):
     renamed_file = str(file).split(".jpg")[0]
-    splitted_file = renamed_file.split("_")
+    splitted_file = renamed_file.split(DELIMITER)
     splitted_file = list(map(remove_placeholders_map, splitted_file))
     assert_file_name_list(splitted_file)
     file_name_dict = {}
