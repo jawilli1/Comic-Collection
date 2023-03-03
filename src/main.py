@@ -1,9 +1,10 @@
 from pathlib import Path
 from split_files import file_name_to_dict, convert_dicts_to_csv
+from parser import parse
 
 
 def list_files(location="./Photos/"):
-    return list(Path(location).rglob("*.jpg"))
+    return list(file.name for file in Path(location).rglob("*.jpg"))
 
 
 def sort_file_names_to_dict(files: list):
@@ -18,7 +19,15 @@ def write_dict_to_csv(dict_list, file_name):
 
 
 if __name__ == "__main__":
-    files = list_files()
+
+    args = parse()
+    files = list_files(location=args.directory)
     dict_list = sort_file_names_to_dict(files)
-    write_dict_to_csv(dict_list, 'file_names.csv')
-    print(len(dict_list))
+    write_dict_to_csv(dict_list, args.output_file)
+
+    print(
+        f"""
+    Found {len(dict_list)} files within '{args.directory}' to parse.
+    Ouput file written to '{args.output_file}'.
+    """
+    )
