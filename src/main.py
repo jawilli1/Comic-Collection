@@ -2,21 +2,8 @@ from pathlib import Path
 from split_files import file_name_to_dict, convert_dicts_to_csv
 
 
-def list_files(location="./Photos/2022-01"):
+def list_files(location="./Photos/"):
     return list(Path(location).rglob("*.jpg"))
-
-
-def test_list_files():
-    return [
-        "Mad^EC^1^%35^July^1958.jpg",
-        "Detective Comics^DC^1^1^Sep^1940.jpg",
-        "Mad^^^110^Sep^1966.jpg",
-        "Mad^ ^ ^110^Sep^1966.jpg",
-        "Mad^     ^     ^110^Sep^1966.jpg",
-        "Detective Comics^^^4^^1953.jpg",
-        "Mad^^^250.jpg",
-        "Simpsons Shenanigans^Bongo.jpg",
-    ]
 
 
 def sort_file_names_to_dict(files: list):
