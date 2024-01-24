@@ -2,11 +2,11 @@ import csv
 
 FIELDS = (
     "Name",
+    "Publisher",
+    "Volume",
     "Number",
     "Month",
     "Year",
-    "Volume",
-    "Publisher",
     "Series",
 )
 
@@ -20,7 +20,7 @@ def assert_file_name_list(file_name_list):
     assert file_name_list_length >= 1, "File must have a name"
     assert (
         file_name_list_length <= field_length
-    ), f"File can only have {field_length} has {file_name_list_length}"
+    ), f"File can only have {field_length} has {file_name_list_length} List: {file_name_list}"
 
 
 def remove_placeholders_map(item):
