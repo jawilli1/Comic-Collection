@@ -1,0 +1,6 @@
+find . -type f -name "*.jpg" | while IFS= read -r filepath
+do
+   filename=$(basename "$filepath" .jpg)
+   parentdir=$(basename "$(dirname "$filepath")")
+   echo "\"$filename\",\"$parentdir\""
+done | sort > titles.csv
